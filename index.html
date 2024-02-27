@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简易个人任务管理系统</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+  <link rel="stylesheet" href="css/t.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="clear">
+        <i class="fa fa-refresh"></i>
+      </div>
+      <h2 style="margin: 5px">简易个人任务管理系统</h2>
+      <div id="date"></div>
+    </div>
+
+    <div class="content">
+      <ul id="list">
+        <!-- 
+            <li class="item">
+                <i class="fa fa-circle-thin co" job="complete" id="0"></i>
+                <p class="text">Drink Coffee</p>
+                <i class="fa fa-trash-o de" job="delete" id="0"></i> 
+            </li> -->
+      </ul>
+    </div>
+
+    <div class="add-to-do">
+      <i class="fa fa-plus-circle"></i>
+      <input type="text" id="input" placeholder="Add a to-do">
+    </div>
+
+  </div>
+  <!-- 编辑任务的模态框 -->
+  <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editTaskModalLabel">编辑任务</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="editTaskInput" class="form-control mb-3" placeholder="任务内容">
+          <select class="form-control" id="editTaskPriority">
+            <option value="1">1星</option>
+            <option value="2">2星</option>
+            <option value="3">3星</option>
+            <option value="4">4星</option>
+            <option value="5">5星</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary" id="saveEdit">保存修改</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
